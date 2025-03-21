@@ -69,6 +69,14 @@ body{
     font-size: 1rem;
     color: #111;
 }
+.container * {
+    animation-play-state: paused !important; /* Evita que las animaciones se ejecuten antes de tiempo */
+}
+
+.active * {
+    animation-play-state: running !important; /* Reactiva las animaciones cuando la clase active esté presente */
+}
+
 
 @media screen and (max-width:574px){
     .greetings{
