@@ -12,6 +12,10 @@ body{
     justify-content: center;
     background-color: black;
 }
+.name {
+  unicode-bidi: isolate; /* Evita cambios de traducción automática */
+}
+
 .greetings{
     font-size: 6rem;
     font-weight: 900;
