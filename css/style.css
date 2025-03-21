@@ -15,6 +15,19 @@ body{
 .name {
   unicode-bidi: isolate; /* Evita cambios de traducción automática */
 }
+.letter {
+  display: inline-block;
+  position: relative;
+}
+
+.letter::after {
+  content: attr(data-text); /* Usa un atributo para el texto */
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden; /* No es visible para el usuario */
+}
+
 
 .greetings{
     font-size: 6rem;
