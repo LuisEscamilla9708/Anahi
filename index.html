@@ -4,42 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="img/flowers.png" type="image/x-icon">
     <title>FLORES</title>
 </head>
-<body>
-    <div class="greetings">
 
-        <span>H</span>
-        <span>O</span>
-	<span>L</span>
-        <span>A</span>
-        <span></span>
-   
-        <span>P</span>
-        <span>A</span>
-	<span>L</span>
-        <span>O</span>
-        <span>M</span>
-        <span>A</span>
-        <span></span>
+<body class="container">
+    <!-- Audio con autoplay corregido -->
+    <audio id="bg-music" autoplay loop>
+        <source src="img/flores_amarillas.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+    
+    <div class="night"></div>
+    
+    <!-- Nombre corregido para evitar la traducción -->
+    <div class="name" translate="no" lang="en">
+      <span class="letter">A</span>
+      <span class="letter">N</span>
+      <span class="letter">A</span>
+      <span class="letter">H</span>
+      <span class="letter">I</span>
     </div>
-    <div class="greetings">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+
+    <div class="flowers">
+        <!-- Animación de flores -->
+        <div class="flower flower--1"></div>
+        <div class="flower flower--2"></div>
+        <div class="flower flower--3"></div>
+        <div class="flower flower--4"></div>
     </div>
-    <div class="description">
-        <span>TENGO UNA SORPRESA PARA TÍ</span>
-    </div>
-    <div class="button">
-        <button>
-            <a href="FLORES.html">CLICK AQUÍ</a>
-        </button>
-    </div>
+
+    <script>
+        // Activar animaciones correctamente
+        window.onload = () => {
+            document.body.classList.add("active");
+        };
+
+        // Reproducción del audio si es bloqueado
+        document.addEventListener("click", () => {
+            let audio = document.getElementById("bg-music");
+            if (audio && audio.paused) {
+                audio.play();
+            }
+        });
+    </script>
 </body>
 </html>
+
