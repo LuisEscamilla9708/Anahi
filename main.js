@@ -1,6 +1,6 @@
 onload = () => {
-    // 1. Elimina la clase "container" para activar animaciones
-    document.body.classList.remove("container");
+    document.body.classList.add("active"); // En vez de quitar "container", agregamos una clase nueva
+};
 
     // 2. Evita la traducción automática creando dinámicamente el texto "Anahi"
     let nameContainer = document.querySelector(".name");
